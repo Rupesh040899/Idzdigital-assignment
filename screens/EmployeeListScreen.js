@@ -46,7 +46,9 @@ export default function EmployeeListScreen({ navigation }) {
           style={styles.item}
           onPress={() => navigation.navigate('EmployeeDetails', { employee: item })}
         >
-          <Text style={styles.name}>{item.name}</Text>
+          <Text style={styles.text}>{item.name}</Text>
+          <Text style={styles.text}>{item.age}</Text>
+          <Text style={styles.text}>{item.salary}</Text>
         </TouchableOpacity>
       )}
     />
@@ -60,13 +62,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   item: {
-    padding: 16,
-    backgroundColor: '#fff',
+    paddingHorizontal: 10,
+    paddingVertical: 8,
     borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    borderBottomColor: '#999',
   },
-  name: {
-    fontSize: 18,
+  text: {
+    fontSize: 20,
+    color: '#ccc',
   },
   error: {
     color: 'red',

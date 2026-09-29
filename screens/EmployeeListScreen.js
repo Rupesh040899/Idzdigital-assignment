@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, ActivityIndicator, StyleSheet, Platform } from 'react-native';
 
-const URL = 'https://aamras.com/dummy/EmployeeDetails.json';
+const URL = Platform.OS === 'web'
+  ? '/api/dummy/EmployeeDetails.json'
+  : 'https://aamras.com/dummy/EmployeeDetails.json';
 
 export default function EmployeeListScreen({ navigation }) {
   const [employees, setEmployees] = useState([]);

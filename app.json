@@ -1,4 +1,4 @@
-﻿{
+{
   "expo": {
     "name": "EmployeeDummy",
     "slug": "employee-app",
@@ -6,9 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
